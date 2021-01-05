@@ -1,0 +1,4 @@
+module ApacheArrowGlib [system] {
+    header "shim.h"
+    export *
+}

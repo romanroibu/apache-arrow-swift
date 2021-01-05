@@ -14,9 +14,15 @@ let package = Package(
     targets: [
         .target(
             name: "ApacheArrow",
-            dependencies: []),
+            dependencies: ["ApacheArrowGlib"]),
+        .systemLibrary(
+            name: "ApacheArrowGlib",
+            providers: [
+                .brew(["apache-arrow-glib"]),
+            ]
+        ),
         .testTarget(
             name: "ApacheArrowTests",
-            dependencies: ["ApacheArrow"])
+            dependencies: ["ApacheArrow"]),
     ]
 )
